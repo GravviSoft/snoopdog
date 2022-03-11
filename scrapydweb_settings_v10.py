@@ -356,3 +356,5 @@ DATA_PATH = os.environ.get('DATA_PATH', '')
 # 'sqlite:///C:/Users/username'
 # 'sqlite:////home/username'
 DATABASE_URL = os.environ.get('DATABASE_URL2', '')
+# from sqlalchemy import create_engine
+# engine = create_engine('postgresql://localhost/[YOUR_DATABASE_NAME]')

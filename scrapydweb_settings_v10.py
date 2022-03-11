@@ -355,4 +355,4 @@ DATA_PATH = os.environ.get('DATA_PATH', '')
 # 'postgres://username:password@127.0.0.1:5432'
 # 'sqlite:///C:/Users/username'
 # 'sqlite:////home/username'
-DATABASE_URL = os.environ.get('DATABASE_URL', '')
+DATABASE_URL = os.environ.get('DATABASE_URL2', '')

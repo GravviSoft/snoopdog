@@ -1,0 +1,143 @@
+2022-03-11 13:51:47 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: Docdash)
+2022-03-11 13:51:47 [scrapy.utils.log] INFO: Versions: lxml 4.8.0.0, libxml2 2.9.12, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 22.1.0, Python 3.10.2 (v3.10.2:a58ebcc701, Jan 13 2022, 14:50:16) [Clang 13.0.0 (clang-1300.0.29.30)], pyOpenSSL 22.0.0 (OpenSSL 1.1.1m  14 Dec 2021), cryptography 36.0.1, Platform macOS-11.6-x86_64-i386-64bit
+2022-03-11 13:51:47 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2022-03-11 13:51:47 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'Docdash',
+ 'CLOSESPIDER_PAGECOUNT': '10',
+ 'CLOSESPIDER_TIMEOUT': '60',
+ 'CONCURRENT_REQUESTS': '4',
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 32,
+ 'DOWNLOAD_DELAY': '200',
+ 'LOG_FILE': 'logs/default/ZYTE_GRAVVI_DB/2022-03-11T13_50_12.log',
+ 'NEWSPIDER_MODULE': 'Docdash.spiders',
+ 'RETRY_HTTP_CODES': [500,
+                      502,
+                      503,
+                      504,
+                      400,
+                      401,
+                      403,
+                      404,
+                      405,
+                      406,
+                      407,
+                      408,
+                      409,
+                      410,
+                      429],
+ 'ROBOTSTXT_OBEY': 'False',
+ 'SPIDER_MODULES': ['Docdash.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/72.0.3626.109 Safari/537.36'}
+2022-03-11 13:51:47 [scrapy.extensions.telnet] INFO: Telnet Password: 3b1c7d1fede98dd2
+2022-03-11 13:51:47 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.closespider.CloseSpider',
+ 'scrapy.extensions.logstats.LogStats']
+2022-03-11 13:51:48 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy_crawlera.CrawleraMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2022-03-11 13:51:48 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2022-03-11 13:51:48 [scrapy.middleware] INFO: Enabled item pipelines:
+['Docdash.pipelines.GravviPipeline']
+2022-03-11 13:51:48 [scrapy.core.engine] INFO: Spider opened
+2022-03-11 13:51:48 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2022-03-11 13:51:48 [root] WARNING: Adding "http://" to CRAWLERA_URL gravvisoft.crawlera.com:8010
+2022-03-11 13:51:48 [root] INFO: Using crawlera at http://gravvisoft.crawlera.com:8010 (apikey: c79ed6d)
+2022-03-11 13:51:48 [root] INFO: CrawleraMiddleware: disabling download delays on Scrapy side to optimize delays introduced by Crawlera. To avoid this behaviour you can use the CRAWLERA_PRESERVE_DELAY setting but keep in mind that this may slow down the crawl significantly
+2022-03-11 13:51:48 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6025
+2022-03-11 13:51:48 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.scrapethissite.com/pages/simple/> from <GET https://scrapethissite.com/pages/simple/>
+2022-03-11 13:51:49 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.scrapethissite.com/pages/simple/> (referer: None)
+2022-03-11 13:51:50 [py.warnings] WARNING: /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/cryptography/x509/base.py:531: CryptographyDeprecationWarning: Parsed a negative serial number, which is disallowed by RFC 5280.
+  return rust_x509.load_pem_x509_certificate(data)
+
+2022-03-11 13:51:50 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.scrapethissite.com/pages/simple/> (referer: None)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/twisted/internet/defer.py", line 857, in _runCallbacks
+    current.result = callback(  # type: ignore[misc]
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/scrapy/spiders/__init__.py", line 90, in _parse
+    return self.parse(response, **kwargs)
+  File "/Users/beauenslow/Desktop/docker-FML-main/Docdash/spiders/google.py", line 61, in parse
+    for dbases in itertools.islice(collectionyo.find(), int(id_start), int(id_end)):
+ValueError: invalid literal for int() with base 10: '"5"'
+2022-03-11 13:51:50 [scrapy.core.engine] INFO: Closing spider (finished)
+2022-03-11 13:51:50 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'crawlera/delay/reset_backoff': 2,
+ 'crawlera/request': 2,
+ 'crawlera/request/method/GET': 2,
+ 'crawlera/response': 2,
+ 'crawlera/response/status/200': 1,
+ 'crawlera/response/status/301': 1,
+ 'downloader/request_bytes': 850,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 12858,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 1,
+ 'downloader/response_status_count/301': 1,
+ 'elapsed_time_seconds': 2.186059,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2022, 3, 11, 20, 51, 50, 214056),
+ 'httpcompression/response_bytes': 203362,
+ 'httpcompression/response_count': 1,
+ 'log_count/DEBUG': 2,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 12,
+ 'log_count/WARNING': 2,
+ 'memusage/max': 65957888,
+ 'memusage/startup': 65953792,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 2,
+ 'scheduler/dequeued/memory': 2,
+ 'scheduler/enqueued': 2,
+ 'scheduler/enqueued/memory': 2,
+ 'spider_exceptions/ValueError': 1,
+ 'start_time': datetime.datetime(2022, 3, 11, 20, 51, 48, 27997)}
+2022-03-11 13:51:50 [scrapy.core.engine] INFO: Spider closed (finished)
+2022-03-11 13:51:50 [pymongo.ocsp_support] DEBUG: Peer did not staple an OCSP response
+2022-03-11 13:51:50 [pymongo.ocsp_support] DEBUG: Requesting OCSP data
+2022-03-11 13:51:50 [pymongo.ocsp_support] DEBUG: Trying http://r3.o.lencr.org
+2022-03-11 13:51:50 [pymongo.ocsp_support] DEBUG: Peer did not staple an OCSP response
+2022-03-11 13:51:50 [pymongo.ocsp_support] DEBUG: Requesting OCSP data
+2022-03-11 13:51:50 [pymongo.ocsp_support] DEBUG: Trying http://r3.o.lencr.org
+2022-03-11 13:51:50 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): r3.o.lencr.org:80
+2022-03-11 13:51:50 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): r3.o.lencr.org:80
+2022-03-11 13:51:50 [pymongo.ocsp_support] DEBUG: Peer did not staple an OCSP response
+2022-03-11 13:51:50 [pymongo.ocsp_support] DEBUG: Requesting OCSP data
+2022-03-11 13:51:50 [pymongo.ocsp_support] DEBUG: Trying http://r3.o.lencr.org
+2022-03-11 13:51:50 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): r3.o.lencr.org:80
+2022-03-11 13:51:50 [urllib3.connectionpool] DEBUG: http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+2022-03-11 13:51:50 [pymongo.ocsp_support] DEBUG: OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
+2022-03-11 13:51:50 [pymongo.ocsp_support] DEBUG: Verifying response
+2022-03-11 13:51:50 [pymongo.ocsp_support] DEBUG: Responder is issuer
+2022-03-11 13:51:50 [pymongo.ocsp_support] DEBUG: Caching OCSP response.
+2022-03-11 13:51:50 [pymongo.ocsp_support] DEBUG: OCSP cert status: <OCSPCertStatus.GOOD: 0>
+2022-03-11 13:51:50 [urllib3.connectionpool] DEBUG: http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+2022-03-11 13:51:50 [pymongo.ocsp_support] DEBUG: OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
+2022-03-11 13:51:50 [pymongo.ocsp_support] DEBUG: Verifying response
+2022-03-11 13:51:50 [pymongo.ocsp_support] DEBUG: Responder is issuer
+2022-03-11 13:51:50 [pymongo.ocsp_support] DEBUG: Caching OCSP response.
+2022-03-11 13:51:50 [pymongo.ocsp_support] DEBUG: OCSP cert status: <OCSPCertStatus.GOOD: 0>
+2022-03-11 13:51:50 [urllib3.connectionpool] DEBUG: http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+2022-03-11 13:51:50 [pymongo.ocsp_support] DEBUG: OCSP response status: <OCSPResponseStatus.SUCCESSFUL: 0>
+2022-03-11 13:51:50 [pymongo.ocsp_support] DEBUG: Verifying response
+2022-03-11 13:51:50 [pymongo.ocsp_support] DEBUG: Responder is issuer
+2022-03-11 13:51:50 [pymongo.ocsp_support] DEBUG: Caching OCSP response.
+2022-03-11 13:51:50 [pymongo.ocsp_support] DEBUG: OCSP cert status: <OCSPCertStatus.GOOD: 0>
